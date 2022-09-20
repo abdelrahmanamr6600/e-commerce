@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="create_an_account">انشاء حساب</string>
+    <string name="signin">Sign In</string>
+    <string name="sign_in">تسجيل الدخول</string>
+    <string name="please_sign_in_to_continue">من فضلك قم بتسجل الدخول للمتابعة</string>
+
+    <string name="don_t_have_an_account">ليس لديك حساب ؟</string>
+    <string name="sign_up">اشتراك</string>
+    <string name="first_name">الاسم الأول</string>
+    <string name="last_name">الاسم الأخير</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="already_have_an_account">لديك حساب بالفعل ؟</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="register">التسجيل</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="name">لاسم</string>
+</resources>

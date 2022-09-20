@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.signup.SignUpActivity">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:fontFamily="@font/avenirbook"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/background_content_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_register">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_an_account"
+            android:textColor="@color/black"
+           android:textAlignment="center"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_15ssp"/>
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/ic_person"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:contentDescription="Select Image" />
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:fontFamily="@font/avenir"
+            android:hint="@string/name"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:backgroundTint="@color/gold"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_16ssp" />
+        <EditText
+            android:id="@+id/Et_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_150sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:fontFamily="@font/avenir"
+            android:hint="@string/email"
+            android:imeOptions="actionNext"
+            android:backgroundTint="@color/gold"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_16ssp" />
+
+
+        <EditText
+            android:id="@+id/Et_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_200sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:fontFamily="@font/avenir"
+            android:hint="@string/password"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:backgroundTint="@color/gold"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_16ssp" />
+
+        <EditText
+            android:id="@+id/Et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_250sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:fontFamily="@font/avenir"
+            android:imeOptions="actionNext"
+            android:hint="@string/phone_number"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:backgroundTint="@color/gold"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_16ssp" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_register"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:background="@drawable/roundedbrownbutton"
+            android:fontFamily="@font/avenir"
+            android:text="@string/create_an_account"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_SignIn" />
+
+        <TextView
+            android:id="@+id/have_Account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_have_an_account"
+            android:layout_gravity="center|bottom"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:layout_marginBottom="@dimen/_100sdp"
+            android:textColor="@color/grey"/>
+
+
+        <TextView
+            android:id="@+id/tv_singin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in"
+            android:layout_gravity="center|end|bottom"
+            android:layout_marginEnd="@dimen/_80sdp"
+            android:layout_marginBottom="@dimen/_100sdp"
+            android:textColor="@color/grey"
+            android:textStyle="bold"
+            />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:indeterminateTint="@color/gold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_SignIn" />
+
+
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

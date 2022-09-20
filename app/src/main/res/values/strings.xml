@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">My Shop</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="signin">Sign In</string>
+    <string name="sign_in">Sign in</string>
+    <string name="please_sign_in_to_continue">Please sign in to continue</string>
+    <string name="password">Password</string>
+    <string name="forgot">Forgot?</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="phone_number">Phone number</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="name">name</string>
+</resources>
