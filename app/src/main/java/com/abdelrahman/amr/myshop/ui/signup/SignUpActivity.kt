@@ -1,29 +1,20 @@
 package com.abdelrahman.amr.myshop.ui.signup
-
 import android.content.Context
-import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import com.abdelrahman.amr.myshop.databinding.ActivitySignUpBinding
 import com.abdelrahman.amr.myshop.db.PreferenceManager
 import com.abdelrahman.amr.myshop.models.user.User
-import com.abdelrahman.amr.myshop.ui.mainactivity.MainActivity
 import com.abdelrahman.amr.myshop.ui.signin.SignInActivity
-import com.abdelrahman.amr.myshop.utils.MyShopApplication
 import com.abdelrahman.amr.myshop.utils.Resource
 import com.abdelrahman.amr.myshop.utils.SupportFunctions
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var viewModel: SignUpViewModel
@@ -41,6 +32,7 @@ class SignUpActivity : AppCompatActivity() {
     private fun setListeners() {
         binding.btnRegister.setOnClickListener {
             if (hasInternetConnection()) {
+                showProgressBar()
                 registerUser()
             } else {
                 Toast.makeText(this, "no Internet Connection", Toast.LENGTH_LONG).show()
@@ -64,23 +56,18 @@ class SignUpActivity : AppCompatActivity() {
             when (it) {
                 is Resource.Success -> {
                     hideProgressBar()
+                    SupportFunctions.startActivity(this,SignInActivity::class.java)
+
                 }
                 is Resource.Error -> {
                     hideProgressBar()
                     it.message?.let {
                         hideProgressBar()
-                        Log.d("abdelrahman", "error")
                         Toast.makeText(this@SignUpActivity, it, Toast.LENGTH_LONG).show()
-
                     }
                 }
                 is Resource.Loading -> {
-                    Log.d("abdelrahman11122211", "loading")
-                    Toast.makeText(this@SignUpActivity, "loading", Toast.LENGTH_LONG).show()
-                    binding.progressBar.visibility = View.VISIBLE
-                    binding.btnRegister.visibility = View.GONE
-                    binding.haveAccount.visibility = View.INVISIBLE
-                    binding.tvSingin.visibility = View.INVISIBLE
+                    showProgressBar()
                 }
             }
         }
@@ -90,15 +77,16 @@ class SignUpActivity : AppCompatActivity() {
 
 
 
+
 private fun showProgressBar() {
-    binding.progressBar.visibility = View.VISIBLE
+    binding.progress.visibility = View.VISIBLE
     binding.btnRegister.visibility = View.GONE
     binding.haveAccount.visibility = View.INVISIBLE
     binding.tvSingin.visibility = View.INVISIBLE
 }
 
 private fun hideProgressBar() {
-    binding.progressBar.visibility = View.INVISIBLE
+    binding.progress.visibility = View.INVISIBLE
     binding.btnRegister.visibility = View.VISIBLE
     binding.haveAccount.visibility = View.VISIBLE
     binding.tvSingin.visibility = View.VISIBLE

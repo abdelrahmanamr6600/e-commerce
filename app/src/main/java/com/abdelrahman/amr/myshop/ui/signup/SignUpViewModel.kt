@@ -11,12 +11,11 @@ import com.abdelrahman.amr.myshop.utils.Resource
 import kotlinx.coroutines.launch
 
 class SignUpViewModel:ViewModel() {
-    var userFlow:MutableLiveData<Resource<User>> = MutableLiveData<Resource<User>>()
     private var signUpRepository = SignUpRepository()
+    var userFlow:MutableLiveData<Resource<BaseResponse<UserResponse>>> =signUpRepository.userFlow
        fun registerUser(user: User){
            viewModelScope.launch{
-
-             userFlow =   signUpRepository.registration(user)
+            signUpRepository.registration(user)
            }
      }
 

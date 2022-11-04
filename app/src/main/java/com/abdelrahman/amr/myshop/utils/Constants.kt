@@ -5,5 +5,6 @@ class Constants {
         const val KEY_PREFERENCE_NAME = "myShopDb"
         const val USER_DATA_KEY = "USER_DATA"
         const val BASE_URL = "https://student.valuxapps.com/api/"
+        const val IS_LOGIN = "IsLogin"
     }
 }

@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gold">#D7A324</color>
     <color name="brown">#CC9D76</color>
-    <color name="grey">#272833</color>
+    <color name="grey">#838488</color>
+    <color name="colorGrey">#dddddd</color>
+
 </resources>

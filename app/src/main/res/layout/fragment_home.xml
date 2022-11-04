@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/scroll"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ui.homefragment.HomeFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/download"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+<!--    <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--        android:id="@+id/shimmerFrameLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:clipChildren="false"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/imageView">-->
+
+        <!-- Adding 15 rows of placeholders -->
+<!--        <GridLayout-->
+<!--            android:id="@+id/grid_layout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:columnCount="2"-->
+<!--            android:padding="@dimen/_5sdp"-->
+<!--            android:orientation="horizontal">-->
+<!--            <include-->
+<!--                android:layout_margin="@dimen/_5sdp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                layout="@layout/shimmer_product_item_container"-->
+<!--                android:layout_width="wrap_content"/>-->
+
+<!--            <include-->
+<!--                android:layout_margin="@dimen/_5sdp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                layout="@layout/shimmer_product_item_container"-->
+<!--                android:layout_width="wrap_content"/>-->
+
+<!--            <include-->
+<!--                android:layout_margin="@dimen/_5sdp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                layout="@layout/shimmer_product_item_container"-->
+<!--                android:layout_width="wrap_content"/>-->
+<!--            <include-->
+<!--                android:layout_margin="@dimen/_5sdp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                layout="@layout/shimmer_product_item_container"-->
+<!--                android:layout_width="wrap_content"/>-->
+
+<!--        </GridLayout>-->
+<!--    </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_products"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:spanCount="2"
+        tools:listitem="@layout/product_item_container" />
+
+
+    <ImageView
+        android:id="@+id/iv_ad"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/download"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_products" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

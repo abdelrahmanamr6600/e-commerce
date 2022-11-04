@@ -2,6 +2,7 @@ package com.abdelrahman.amr.myshop.models.user
 
 
 import com.abdelrahman.amr.myshop.models.BaseResponse
+import com.abdelrahman.amr.myshop.models.home.HomeResponse
 import com.google.gson.annotations.SerializedName
 
 data class User(
@@ -31,7 +32,13 @@ data class UserResponse(
     @SerializedName("phone")
     var phone: String? = "",
     @SerializedName("token")
-    var token:String? = null
+    var token:String? = null,
+    @SerializedName("points")
+    var points:Int? = null,
+    @SerializedName("credit")
+    var credit:Int? = null
 
 ):BaseResponse<UserResponse>()
+
+
 

@@ -2,7 +2,6 @@ package com.abdelrahman.amr.myshop.db
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.abdelrahman.amr.myshop.models.user.User
 import com.abdelrahman.amr.myshop.models.user.UserResponse
 import com.abdelrahman.amr.myshop.utils.Constants.Companion.KEY_PREFERENCE_NAME
 import com.abdelrahman.amr.myshop.utils.Constants.Companion.USER_DATA_KEY
